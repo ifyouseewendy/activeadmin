@@ -24,7 +24,7 @@ module ActiveAdmin
       end
 
       def csv_filename
-        "#{resource_collection_name.to_s.gsub('_', '-')}-#{Time.zone.now.to_date.to_s(:default)}.csv"
+        "#{resource_collection_name.to_s.classify.constantize.model_name.human.gsub('_', '-')}-#{Time.zone.now.to_date.to_s(:default)}.csv"
       end
 
       def stream_csv
