@@ -40,6 +40,10 @@ module ActiveAdmin
       self.resource_type = self.class.resource_type(resource)
     end
 
+    def resource_type_i18n
+      self.resource_type.constantize.model_name.human
+    end
+
   end
 end
 
