@@ -81,7 +81,8 @@ ActiveAdmin.after_load do |app|
 
       index do
         column I18n.t('active_admin.comments.resource_type'), :resource_type_i18n
-        column I18n.t('active_admin.comments.author_type'),   :author_type
+        # column I18n.t('active_admin.comments.author_type'),   :author_type
+        column I18n.t('active_admin.comments.author_role'),   :author_role
         column I18n.t('active_admin.comments.resource'),      :resource
         column I18n.t('active_admin.comments.author'),        :author
         column I18n.t('active_admin.comments.body'),          :body

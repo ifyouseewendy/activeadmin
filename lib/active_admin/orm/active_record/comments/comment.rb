@@ -44,6 +44,10 @@ module ActiveAdmin
       self.resource_type.constantize.model_name.human
     end
 
+    def author_role
+      I18n.t("active_admin.admin_user.role.#{self.author.role}")
+    end
+
   end
 end
 
